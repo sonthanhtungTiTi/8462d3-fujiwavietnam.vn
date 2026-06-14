@@ -10,9 +10,17 @@
     <!-- Font Awesome dùng cho các icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .fuji-blue { color: #0066b2; }
-        .bg-fuji-blue { background-color: #0066b2; }
-        .bg-fuji-light { background-color: #f0f7fc; }
+        .fuji-blue {
+            color: #0066b2;
+        }
+
+        .bg-fuji-blue {
+            background-color: #0066b2;
+        }
+
+        .bg-fuji-light {
+            background-color: #f0f7fc;
+        }
     </style>
 </head>
 
@@ -33,7 +41,8 @@
 
             <!-- Thanh tìm kiếm -->
             <div class="hidden md:flex items-center w-1/3 bg-gray-100 rounded-full px-4 py-2 border border-gray-200">
-                <input type="text" placeholder="Tìm sản phẩm Fujiwa..." class="bg-transparent bg-none w-full focus:outline-none text-sm">
+                <input type="text" placeholder="Tìm sản phẩm Fujiwa..."
+                    class="bg-transparent bg-none w-full focus:outline-none text-sm">
                 <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
             </div>
 
@@ -53,7 +62,8 @@
                 </a>
                 <div class="relative cursor-pointer" onclick="alert('Tính năng Giỏ Hàng sẽ sớm ra mắt!')">
                     <i class="fa-solid fa-basket-shopping text-2xl text-gray-700 hover:text-blue-600"></i>
-                    <span class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center font-bold">0</span>
+                    <span
+                        class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center font-bold">0</span>
                 </div>
             </div>
         </div>
@@ -62,24 +72,29 @@
     <!-- CHI TIẾT SẢN PHẨM -->
     <main class="container mx-auto px-4 py-12">
         <div class="mb-6">
-            <a href="index.html" class="text-blue-600 hover:underline text-sm font-medium"><i class="fa-solid fa-arrow-left mr-1"></i> Quay lại danh sách</a>
+            <a href="index.html" class="text-blue-600 hover:underline text-sm font-medium"><i
+                    class="fa-solid fa-arrow-left mr-1"></i> Quay lại danh sách</a>
         </div>
-        
+
         <div class="bg-white rounded-2xl shadow-sm border p-6 md:p-10 mb-10">
             <div class="grid md:grid-cols-2 gap-10">
                 <!-- Cột trái: Ảnh sản phẩm -->
                 <div class="flex justify-center items-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
-                    <img id="detail-img" src="" alt="Product Image" class="w-full max-w-sm object-contain drop-shadow-xl hover:scale-105 transition duration-500">
+                    <img id="detail-img" src="" alt="Product Image"
+                        class="w-full max-w-sm object-contain drop-shadow-xl hover:scale-105 transition duration-500">
                 </div>
-                
+
                 <!-- Cột phải: Thông tin sản phẩm -->
                 <div class="flex flex-col justify-center space-y-6">
                     <div>
-                        <span id="detail-badge" class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-3 inline-block uppercase shadow-sm">Sản phẩm chính hãng</span>
-                        <h1 id="detail-name" class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">Đang tải...</h1>
+                        <span id="detail-badge"
+                            class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-3 inline-block uppercase shadow-sm">Sản
+                            phẩm chính hãng</span>
+                        <h1 id="detail-name" class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                            Đang tải...</h1>
                         <p id="detail-desc" class="text-gray-500 mt-2 text-sm md:text-base">Mô tả sản phẩm</p>
                     </div>
-                    
+
                     <div class="border-t border-b border-gray-100 py-6">
                         <div class="flex items-end space-x-3">
                             <span id="detail-price" class="text-4xl font-black text-red-600">0đ</span>
@@ -91,53 +106,78 @@
                         <h3 class="font-semibold text-gray-800">Số lượng:</h3>
                         <div class="flex items-center space-x-4">
                             <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden bg-white">
-                                <button id="btn-decrease" class="px-4 py-2 text-gray-600 hover:bg-gray-100 transition"><i class="fa-solid fa-minus"></i></button>
-                                <input id="quantity-input" type="number" value="1" min="1" class="w-16 text-center font-bold focus:outline-none border-x border-gray-300 py-2">
-                                <button id="btn-increase" class="px-4 py-2 text-gray-600 hover:bg-gray-100 transition"><i class="fa-solid fa-plus"></i></button>
+                                <button id="btn-decrease"
+                                    class="px-4 py-2 text-gray-600 hover:bg-gray-100 transition"><i
+                                        class="fa-solid fa-minus"></i></button>
+                                <input id="quantity-input" type="number" value="1" min="1"
+                                    class="w-16 text-center font-bold focus:outline-none border-x border-gray-300 py-2">
+                                <button id="btn-increase"
+                                    class="px-4 py-2 text-gray-600 hover:bg-gray-100 transition"><i
+                                        class="fa-solid fa-plus"></i></button>
                             </div>
-                            <span class="text-sm text-green-600 font-medium"><i class="fa-solid fa-check mr-1"></i> Tình trạng: Còn hàng</span>
+                            <span class="text-sm text-green-600 font-medium"><i class="fa-solid fa-check mr-1"></i> Tình
+                                trạng: Còn hàng</span>
                         </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <button id="btn-add-to-cart-detail" class="flex-1 bg-white border-2 border-blue-600 hover:bg-blue-50 text-blue-600 py-4 rounded-xl font-bold text-lg transition flex justify-center items-center">
+                        <button id="btn-add-to-cart-detail"
+                            class="flex-1 bg-white border-2 border-blue-600 hover:bg-blue-50 text-blue-600 py-4 rounded-xl font-bold text-lg transition flex justify-center items-center">
                             <i class="fa-solid fa-cart-plus mr-2"></i> Thêm vào giỏ
                         </button>
-                        <button id="btn-buy-now" class="flex-1 bg-fuji-blue hover:bg-blue-700 text-white py-4 rounded-xl font-bold text-lg transition shadow-lg shadow-blue-200 flex justify-center items-center">
+                        <button id="btn-buy-now"
+                            class="flex-1 bg-fuji-blue hover:bg-blue-700 text-white py-4 rounded-xl font-bold text-lg transition shadow-lg shadow-blue-200 flex justify-center items-center">
                             Mua Ngay
                         </button>
                     </div>
 
                     <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 space-y-3 mt-4">
-                        <p class="flex items-center"><i class="fa-solid fa-truck-fast w-6 text-center"></i> Giao hàng tận nơi miễn phí (Từ 3 thùng/bình)</p>
-                        <p class="flex items-center"><i class="fa-solid fa-shield-halved w-6 text-center"></i> Sản phẩm chính hãng Fujiwa 100%</p>
-                        <p class="flex items-center"><i class="fa-solid fa-phone w-6 text-center"></i> Hỗ trợ đặt hàng nhanh: <strong>1900 8462</strong></p>
+                        <p class="flex items-center"><i class="fa-solid fa-truck-fast w-6 text-center"></i> Giao hàng
+                            tận nơi miễn phí (Từ 3 thùng/bình)</p>
+                        <p class="flex items-center"><i class="fa-solid fa-shield-halved w-6 text-center"></i> Sản phẩm
+                            chính hãng Fujiwa 100%</p>
+                        <p class="flex items-center"><i class="fa-solid fa-phone w-6 text-center"></i> Hỗ trợ đặt hàng
+                            nhanh: <strong>1900 8462</strong></p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- THÔNG TIN BỔ SUNG -->
         <div class="bg-white rounded-2xl shadow-sm border p-6 md:p-10">
             <h2 class="text-2xl font-bold text-gray-900 border-b pb-4 mb-6">Thông Tin Chi Tiết</h2>
             <div class="text-gray-600 text-sm md:text-base leading-relaxed space-y-4">
-                <p>Nước uống I-on Kiềm Fujiwa được sản xuất bằng công nghệ máy điện phân ion kiềm tiên tiến độc quyền từ Nhật Bản. Nước không chỉ sạch mà còn chứa các ion kiềm hữu ích, giúp cơ thể cân bằng độ pH, trung hòa axit dư thừa.</p>
+                <p>Nước uống I-on Kiềm Fujiwa được sản xuất bằng công nghệ máy điện phân ion kiềm tiên tiến độc quyền từ
+                    Nhật Bản. Nước không chỉ sạch mà còn chứa các ion kiềm hữu ích, giúp cơ thể cân bằng độ pH, trung
+                    hòa axit dư thừa.</p>
                 <div class="grid md:grid-cols-2 gap-6 mt-6">
                     <div class="bg-gray-50 p-6 rounded-xl">
-                        <h4 class="font-bold text-gray-800 mb-2 flex items-center"><i class="fa-solid fa-droplet text-blue-500 mr-2"></i> Tính Kiềm Tự Nhiên (pH 8.5 - 9.0+)</h4>
-                        <p class="text-sm">Trung hòa axit dư thừa trong cơ thể do ăn uống không điều độ, stress hoặc ô nhiễm môi trường. Hỗ trợ tốt cho hệ tiêu hóa.</p>
+                        <h4 class="font-bold text-gray-800 mb-2 flex items-center"><i
+                                class="fa-solid fa-droplet text-blue-500 mr-2"></i> Tính Kiềm Tự Nhiên (pH 8.5 - 9.0+)
+                        </h4>
+                        <p class="text-sm">Trung hòa axit dư thừa trong cơ thể do ăn uống không điều độ, stress hoặc ô
+                            nhiễm môi trường. Hỗ trợ tốt cho hệ tiêu hóa.</p>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-xl">
-                        <h4 class="font-bold text-gray-800 mb-2 flex items-center"><i class="fa-solid fa-bolt text-yellow-500 mr-2"></i> Bổ sung Vi Khoáng (Na, K, Ca, Mg)</h4>
-                        <p class="text-sm">Chứa vi khoáng thiên nhiên dưới dạng ion giúp cơ thể dễ dàng hấp thụ, đặc biệt cần thiết cho người chơi thể thao.</p>
+                        <h4 class="font-bold text-gray-800 mb-2 flex items-center"><i
+                                class="fa-solid fa-bolt text-yellow-500 mr-2"></i> Bổ sung Vi Khoáng (Na, K, Ca, Mg)
+                        </h4>
+                        <p class="text-sm">Chứa vi khoáng thiên nhiên dưới dạng ion giúp cơ thể dễ dàng hấp thụ, đặc
+                            biệt cần thiết cho người chơi thể thao.</p>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-xl">
-                        <h4 class="font-bold text-gray-800 mb-2 flex items-center"><i class="fa-solid fa-magnifying-glass-plus text-purple-500 mr-2"></i> Cụm Phân Tử Nước Siêu Nhỏ</h4>
-                        <p class="text-sm">Kích thước chỉ bằng 1/5 cụm phân tử nước thông thường, giúp thẩm thấu nhanh vào tế bào, bù nước và thanh lọc cơ thể hiệu quả.</p>
+                        <h4 class="font-bold text-gray-800 mb-2 flex items-center"><i
+                                class="fa-solid fa-magnifying-glass-plus text-purple-500 mr-2"></i> Cụm Phân Tử Nước
+                            Siêu Nhỏ</h4>
+                        <p class="text-sm">Kích thước chỉ bằng 1/5 cụm phân tử nước thông thường, giúp thẩm thấu nhanh
+                            vào tế bào, bù nước và thanh lọc cơ thể hiệu quả.</p>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-xl">
-                        <h4 class="font-bold text-gray-800 mb-2 flex items-center"><i class="fa-solid fa-shield-virus text-green-500 mr-2"></i> Giàu Hydrogen Chống Oxy Hóa</h4>
-                        <p class="text-sm">Loại bỏ các gốc tự do có hại, ngăn ngừa sự lão hóa, duy trì sự tươi trẻ và tăng cường hệ miễn dịch tự nhiên.</p>
+                        <h4 class="font-bold text-gray-800 mb-2 flex items-center"><i
+                                class="fa-solid fa-shield-virus text-green-500 mr-2"></i> Giàu Hydrogen Chống Oxy Hóa
+                        </h4>
+                        <p class="text-sm">Loại bỏ các gốc tự do có hại, ngăn ngừa sự lão hóa, duy trì sự tươi trẻ và
+                            tăng cường hệ miễn dịch tự nhiên.</p>
                     </div>
                 </div>
             </div>
@@ -149,8 +189,10 @@
         <div class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="space-y-3">
                 <h4 class="text-white font-bold text-lg">FUJIWA VIỆT NAM SHOP</h4>
-                <p class="text-xs leading-relaxed">Đại lý cung cấp giải pháp nước sạch tốt cho sức khỏe theo tiêu chuẩn hàng đầu từ Nhật Bản.</p>
-                <p class="text-xs"><i class="fa-solid fa-location-dot text-blue-500 mr-2"></i> Nhà máy: Huyện Củ Chi, TP. Hồ Chí Minh</p>
+                <p class="text-xs leading-relaxed">Đại lý cung cấp giải pháp nước sạch tốt cho sức khỏe theo tiêu chuẩn
+                    hàng đầu từ Nhật Bản.</p>
+                <p class="text-xs"><i class="fa-solid fa-location-dot text-blue-500 mr-2"></i> Nhà máy: Huyện Củ Chi,
+                    TP. Hồ Chí Minh</p>
             </div>
             <div class="space-y-2">
                 <h4 class="text-white font-bold">Chính Sách Bán Hàng</h4>
@@ -174,13 +216,13 @@
 
     <!-- App JS chứa logic giỏ hàng -->
     <script src="js/app.js"></script>
-    
+
     <!-- Script riêng cho trang chi tiết -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const productStr = localStorage.getItem('selectedProduct');
             let product = null;
-            if(productStr) {
+            if (productStr) {
                 product = JSON.parse(productStr);
                 document.getElementById('detail-img').src = product.img || '';
                 document.getElementById('detail-name').innerText = product.name || 'Sản phẩm Fujiwa';
@@ -189,10 +231,10 @@
                 document.getElementById('detail-desc').innerText = product.desc || 'Công nghệ điện phân 100% từ Nhật Bản.';
             } else {
                 // Default product if opened directly without localstorage
-                document.getElementById('detail-img').src = "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=300&q=80";
+                document.getElementById('detail-img').src = "https://cdn.builder.io/api/v1/image/assets%2Ff111c4d546bd4834b62e6849e7326ffa%2Ffab095c115bb41109dab5ca48c711867?format=jpeg&width=768";
                 document.getElementById('detail-name').innerText = "Thùng Nước Uống I-on Kiềm Fujiwa 450ml";
                 document.getElementById('detail-price').innerText = "168.000đ";
-                product = { name: "Thùng Nước Uống I-on Kiềm Fujiwa 450ml", price: "168.000đ", img: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=300&q=80" };
+                product = { name: "Thùng Nước Uống I-on Kiềm Fujiwa 450ml", price: "168.000đ", img: "https://cdn.builder.io/api/v1/image/assets%2Ff111c4d546bd4834b62e6849e7326ffa%2Ffab095c115bb41109dab5ca48c711867?format=jpeg&width=768" };
             }
 
             // Xử lý nút tăng giảm số lượng
@@ -201,7 +243,7 @@
                 qtyInput.value = parseInt(qtyInput.value) + 1;
             };
             document.getElementById('btn-decrease').onclick = () => {
-                if(parseInt(qtyInput.value) > 1) {
+                if (parseInt(qtyInput.value) > 1) {
                     qtyInput.value = parseInt(qtyInput.value) - 1;
                 }
             };
@@ -211,17 +253,17 @@
                 const quantity = parseInt(qtyInput.value) || 1;
                 let cart = JSON.parse(localStorage.getItem('fujiwa_cart') || '[]');
                 const priceNum = parseInt(product.price.replace(/[^0-9]/g, '')) || 0;
-                
+
                 const existing = cart.find(i => i.name === product.name);
-                if(existing) {
+                if (existing) {
                     existing.quantity += quantity;
                 } else {
                     cart.push({ name: product.name, price: priceNum, img: product.img, quantity: quantity });
                 }
-                
+
                 localStorage.setItem('fujiwa_cart', JSON.stringify(cart));
-                if(typeof updateCartCount === 'function') updateCartCount();
-                
+                if (typeof updateCartCount === 'function') updateCartCount();
+
                 alert('Đã thêm ' + quantity + ' x "' + product.name + '" vào giỏ hàng thành công!');
             };
 
@@ -234,4 +276,5 @@
         });
     </script>
 </body>
+
 </html>
