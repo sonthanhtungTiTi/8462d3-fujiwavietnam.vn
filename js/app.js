@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lắng nghe sự kiện thêm vào giỏ hàng ngay tại danh sách
     const addToCartBtns = document.querySelectorAll('button');
     addToCartBtns.forEach(btn => {
+        if(btn.id === 'btn-add-to-cart-detail') return; // Bỏ qua nút ở trang chi tiết
         if(btn.innerText.includes('Thêm vào giỏ') || btn.innerText.includes('Đặt đổi bình')) {
             btn.addEventListener('click', (e) => {
                 const card = e.target.closest('.bg-white.border');
